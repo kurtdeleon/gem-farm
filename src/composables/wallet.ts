@@ -2,8 +2,6 @@ import { computed, readonly, ref, shallowRef, Ref } from 'vue';
 import {
   PhantomWalletAdapter,
   SolflareWalletAdapter,
-  SolletExtensionWalletAdapter,
-  SolletWalletAdapter,
   // Wallet,
 } from '@solana/wallet-adapter-wallets';
 import { PublicKey } from '@solana/web3.js';
@@ -18,8 +16,6 @@ const walletAdapter = ref<Ref<SignerWalletAdapter | null>>(shallowRef(null));
 
 const walletMapping = {
   Phantom: PhantomWalletAdapter,
-  Sollet: SolletWalletAdapter,
-  SolletExtension: SolletExtensionWalletAdapter,
   Solflare: SolflareWalletAdapter,
 };
 
